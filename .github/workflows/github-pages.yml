@@ -15,7 +15,7 @@ jobs:
       - name: Build And Deploy
         with:
           path: vite-project
-        uses: JamesIves/github-pages-deploy-action@master
+        uses: JamesIves/github-pages-deploy-action@4.1.7
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
