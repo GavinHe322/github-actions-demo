@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       
-      - name: Build
+      - name: Build And Deploy
         with:
           path: vite-project
         uses: JamesIves/github-pages-deploy-action@master
