@@ -16,6 +16,8 @@ jobs:
         cd vite-project
         npm install
         npm run build
+    - name: ecno
+      run: echo ${{ GITHUB_WORKSPACE }}
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
