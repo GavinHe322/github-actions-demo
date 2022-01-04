@@ -14,6 +14,7 @@ jobs:
     - name: Install and Build
       run: |
         pwd
+        cd vite-project
         npm install
         npm run build
       working-directory: vite-project
