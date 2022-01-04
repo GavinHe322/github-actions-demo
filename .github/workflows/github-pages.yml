@@ -16,13 +16,11 @@ jobs:
       run: |
         yarn install
         yarn build
-    - name: ecno
-      run: |
-        pwd
-        echo echo
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: crazy-max/ghaction-github-pages@v2
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
+        target_branch: gh-pages
+        build_dir: build
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
