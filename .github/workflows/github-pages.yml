@@ -12,12 +12,13 @@ jobs:
       with:
         persist-credentials: false
     - name: Install and Build
+      working-directory: vite-project
       run: |
         pwd
+        echo 111
         cd vite-project
         npm install
         npm run build
-      working-directory: vite-project
     - name: ecno
       run: |
         pwd
