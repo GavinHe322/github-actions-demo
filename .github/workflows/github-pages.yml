@@ -16,6 +16,12 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - name: Install And Build
+        working-directory: vite-project
+        run: |
+          pwd
+          yarn install
+          yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
