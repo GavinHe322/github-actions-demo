@@ -13,13 +13,17 @@ jobs:
         persist-credentials: false
     - name: Install and Build
       run: |
-        cd vite-project
+        pwd
         npm install
         npm run build
+      working-directory: vite-project
     - name: ecno
       run: echo ${{ GITHUB_WORKSPACE }}
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
+      run: |
+        pwd
+        echo 'publish'
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
