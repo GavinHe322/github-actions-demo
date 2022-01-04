@@ -14,12 +14,6 @@ jobs:
     - name: Install and Build
       working-directory: vite-project
       run: |
-        echo 111
-        pwd
-        echo 111
-        echo 222
-        cd vite-project
-        echo 222
         yarn install
         yarn build
     - name: ecno
